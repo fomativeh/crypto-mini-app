@@ -118,7 +118,7 @@ const App = () => {
     // tele.initDataUnsafe.initData
 
 // Access the data sent from the bot
-const receivedId = initData.telegram_id;
+// const receivedId = initData.telegram_id;
     console.log(tele)
     let initData = tele.initData
     console.log(initData)
