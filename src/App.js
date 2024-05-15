@@ -301,7 +301,7 @@ const App = () => {
     //   )}
     // </main>
     <p>
-      Message is {tele.initData}
+      Message is {tele.initData.telegram_id}
     </p>
   );
 };
