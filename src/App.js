@@ -304,7 +304,7 @@ const App = () => {
     //     />
     //   )}
     // </main>
-    <p>
+    <p className="text-[red]">
       Message is {tele.initDataUnsafe.initData.telegram_id}
     </p>
   );
