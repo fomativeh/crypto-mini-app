@@ -184,122 +184,125 @@ const App = () => {
   tele.MainButton.onClick(handleClick);
 
   return (
-    <main className="relative main font-medium bg-themeBlack w-[100vw] text-[#F2EFEF] max-w-[400px] min-w-[280px] min-h-screen pt-[30px] px-[15px] flex flex-col justify-start items-center">
-      <a
-        href="https://t.me/crypto"
-        className="opacity-0 absolute z-[-5]"
-        id="click"
-      ></a>
-      {/* Navbar */}
-      <section className="flex justify-between items-center px-[5px] w-full">
-        <figure className="flex justify-start items-center">
-          {/* <img
-            src="/assets/icons/nav_logo.svg"
-            className="w-[30px] h-[30px] mr-[5px]"
-          /> */}
-          <img
-            src="/assets/images/welcome.png"
-            className="h-[24px] mr-[12px]"
-          />
-          <img src="/assets/icons/@Welcome.svg" className="h-[24px]" />
-        </figure>
+    // <main className="relative main font-medium bg-themeBlack w-[100vw] text-[#F2EFEF] max-w-[400px] min-w-[280px] min-h-screen pt-[30px] px-[15px] flex flex-col justify-start items-center">
+    //   <a
+    //     href="https://t.me/crypto"
+    //     className="opacity-0 absolute z-[-5]"
+    //     id="click"
+    //   ></a>
+    //   {/* Navbar */}
+    //   <section className="flex justify-between items-center px-[5px] w-full">
+    //     <figure className="flex justify-start items-center">
+    //       {/* <img
+    //         src="/assets/icons/nav_logo.svg"
+    //         className="w-[30px] h-[30px] mr-[5px]"
+    //       /> */}
+    //       <img
+    //         src="/assets/images/welcome.png"
+    //         className="h-[24px] mr-[12px]"
+    //       />
+    //       <img src="/assets/icons/@Welcome.svg" className="h-[24px]" />
+    //     </figure>
 
-        <figure className="flex justify-start">
-          <img
-            src="/assets/icons/Notification.svg"
-            className="w-[24px] h-[24px] mr-[22px] items-center"
-          />
-          <img src="/assets/icons/Group.svg" className="w-[24px] h-[24px]" />
-        </figure>
-      </section>
+    //     <figure className="flex justify-start">
+    //       <img
+    //         src="/assets/icons/Notification.svg"
+    //         className="w-[24px] h-[24px] mr-[22px] items-center"
+    //       />
+    //       <img src="/assets/icons/Group.svg" className="w-[24px] h-[24px]" />
+    //     </figure>
+    //   </section>
 
-      {/* White Line */}
-      <figure className="w-full h-[10px] mt-[20px]">
-        <img src="/assets/icons/Navbar Line.svg" className="w-full h-full" />
-      </figure>
+    //   {/* White Line */}
+    //   <figure className="w-full h-[10px] mt-[20px]">
+    //     <img src="/assets/icons/Navbar Line.svg" className="w-full h-full" />
+    //   </figure>
 
-      {/* Logo video loop */}
+    //   {/* Logo video loop */}
 
-      <section className="overflow-hidden h-[180px] w-full rounded-[25px] bg-[black] my-[10px]">
-        <video autoPlay loop muted playsInline className="w-[103%] h-[103%]">
-          <source src="/assets/videos/logo.mp4" className="w-full h-full" />
-        </video>
-      </section>
+    //   <section className="overflow-hidden h-[180px] w-full rounded-[25px] bg-[black] my-[10px]">
+    //     <video autoPlay loop muted playsInline className="w-[103%] h-[103%]">
+    //       <source src="/assets/videos/logo.mp4" className="w-full h-full" />
+    //     </video>
+    //   </section>
 
-      <FollowComponent type={1} />
+    //   <FollowComponent type={1} />
 
-      <span className="text-left text-[#F2EFEF] w-full block ml-[10px] text-[20px] mt-[20px]">
-        Welcome to @Crypto
-      </span>
+    //   <span className="text-left text-[#F2EFEF] w-full block ml-[10px] text-[20px] mt-[20px]">
+    //     Welcome to @Crypto
+    //   </span>
 
-      {/* White line */}
-      <figure className="w-full h-[10px] my-[20px]">
-        <img
-          src="/assets/icons/Navbar Line (1).svg"
-          className="w-full h-full"
-        />
-      </figure>
+    //   {/* White line */}
+    //   <figure className="w-full h-[10px] my-[20px]">
+    //     <img
+    //       src="/assets/icons/Navbar Line (1).svg"
+    //       className="w-full h-full"
+    //     />
+    //   </figure>
 
-      <section className="flex justify-between items-start px-[5px] w-full h-[46px] mb-[10px]">
-        {/* logo and text section */}
-        <section className="flex justify-start items-center h-[46px]">
-          <figure className="w-[46px] h-full flex justify-center items-center bg-[#31333D] rounded-[50px] mr-[10px]">
-            <img
-              src="/assets/images/crypto.png"
-              className="w-[32px] h-[32px]"
-            />
-          </figure>
+    //   <section className="flex justify-between items-start px-[5px] w-full h-[46px] mb-[10px]">
+    //     {/* logo and text section */}
+    //     <section className="flex justify-start items-center h-[46px]">
+    //       <figure className="w-[46px] h-full flex justify-center items-center bg-[#31333D] rounded-[50px] mr-[10px]">
+    //         <img
+    //           src="/assets/images/crypto.png"
+    //           className="w-[32px] h-[32px]"
+    //         />
+    //       </figure>
 
-          <section className="flex flex-col justify-center items-start h-full">
-            <section className="flex justify-start items-center mb-[4px]">
-              <span className="font-normal">Crypto</span>
-              <figure className="ml-[4px] w-[17px] h-[17px] flex justify-center items-center">
-                <img src="/assets/images/badge.svg" className="w-full h-full" />
-              </figure>
-            </section>
+    //       <section className="flex flex-col justify-center items-start h-full">
+    //         <section className="flex justify-start items-center mb-[4px]">
+    //           <span className="font-normal">Crypto</span>
+    //           <figure className="ml-[4px] w-[17px] h-[17px] flex justify-center items-center">
+    //             <img src="/assets/images/badge.svg" className="w-full h-full" />
+    //           </figure>
+    //         </section>
 
-            <span className="text-[15px] text-[#8698A9]">@Crypto</span>
-          </section>
-        </section>
+    //         <span className="text-[15px] text-[#8698A9]">@Crypto</span>
+    //       </section>
+    //     </section>
 
-        {/* Options btn section */}
-        <section className="w-[24px] h-[24px] flex justify-evenly items-center">
-          {/* <div className="bg-[#8698A9] rounded-[20px] w-[4px] h-[4px]"></div>
-          <div className="bg-[#8698A9] rounded-[20px] w-[4px] h-[4px]"></div>
-          <div className="bg-[#8698A9] rounded-[20px] w-[4px] h-[4px]"></div> */}
-        </section>
-      </section>
+    //     {/* Options btn section */}
+    //     <section className="w-[24px] h-[24px] flex justify-evenly items-center">
+    //       {/* <div className="bg-[#8698A9] rounded-[20px] w-[4px] h-[4px]"></div>
+    //       <div className="bg-[#8698A9] rounded-[20px] w-[4px] h-[4px]"></div>
+    //       <div className="bg-[#8698A9] rounded-[20px] w-[4px] h-[4px]"></div> */}
+    //     </section>
+    //   </section>
 
-      <span className="block w-full text-left mt-[30px] mb-[40px] text-[20px]">
-        Follow These Steps To Claim Reward
-      </span>
+    //   <span className="block w-full text-left mt-[30px] mb-[40px] text-[20px]">
+    //     Follow These Steps To Claim Reward
+    //   </span>
 
-      <FollowComponent
-        type={2}
-        step={1}
-        prompt={"Follow to @Crypto Tiktok"}
-        joined={tiktokJoined}
-        link={"https://www.tiktok.com/@crypto"}
-      />
-      {tiktokJoined && (
-        <FollowComponent
-          type={2}
-          step={2}
-          prompt={"Subscribe to @Crypto YouTube"}
-          joined={youtubeJoined}
-          link={"https://www.youtube.com/crypto"}
-        />
-      )}
-      {youtubeJoined && (
-        <FollowComponent
-          type={2}
-          step={3}
-          prompt={"Subscribe to @Crypto Onlyfans"}
-          joined={onlyfansJoined}
-          link={"https://onlyfans.com/crypto"}
-        />
-      )}
-    </main>
+    //   <FollowComponent
+    //     type={2}
+    //     step={1}
+    //     prompt={"Follow to @Crypto Tiktok"}
+    //     joined={tiktokJoined}
+    //     link={"https://www.tiktok.com/@crypto"}
+    //   />
+    //   {tiktokJoined && (
+    //     <FollowComponent
+    //       type={2}
+    //       step={2}
+    //       prompt={"Subscribe to @Crypto YouTube"}
+    //       joined={youtubeJoined}
+    //       link={"https://www.youtube.com/crypto"}
+    //     />
+    //   )}
+    //   {youtubeJoined && (
+    //     <FollowComponent
+    //       type={2}
+    //       step={3}
+    //       prompt={"Subscribe to @Crypto Onlyfans"}
+    //       joined={onlyfansJoined}
+    //       link={"https://onlyfans.com/crypto"}
+    //     />
+    //   )}
+    // </main>
+    <p>
+      Message is {tele.initData}
+    </p>
   );
 };
 
