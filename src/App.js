@@ -115,6 +115,10 @@ const App = () => {
     tele.MainButton.color = "#F4AD00";
     tele.MainButton.textColor = "#fff";
     tele.expand();
+    // tele.initDataUnsafe.initData
+
+// Access the data sent from the bot
+const receivedId = initData.telegram_id;
     console.log(tele)
     let initData = tele.initData
     console.log(initData)
@@ -301,7 +305,7 @@ const App = () => {
     //   )}
     // </main>
     <p>
-      Message is {tele.initData.telegram_id}
+      Message is {tele.initDataUnsafe.initData.telegram_id}
     </p>
   );
 };
