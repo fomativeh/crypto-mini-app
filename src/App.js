@@ -57,7 +57,10 @@ const FollowComponent = ({ joined, step, type, prompt, link }) => {
       )}
 
       {type == 2 && (
-        <section className="flex flex-col justify-start items-start mb-[22px] w-full link-card" data-link={`${link}`}>
+        <section
+          className="flex flex-col justify-start items-start mb-[22px] w-full link-card"
+          data-link={`${link}`}
+        >
           <span className="mb-[20px] font-[Aldrich] font-normal">
             STEP {step}
           </span>
@@ -107,6 +110,9 @@ const FollowComponent = ({ joined, step, type, prompt, link }) => {
 
 const tele = window.Telegram.WebApp;
 const App = () => {
+  const [val, setVal] = useState(null);
+  const [val2, setVal2] = useState(null);
+
   //Executes whenever query is changed
   useEffect(() => {
     tele.ready();
@@ -115,14 +121,19 @@ const App = () => {
     tele.MainButton.color = "#F4AD00";
     tele.MainButton.textColor = "#fff";
     tele.expand();
+    setVal(tele.initData);
+    setVal2(tele.initDataUnsafe);
+
     // tele.initDataUnsafe.initData
 
-// Access the data sent from the bot
-// const receivedId = initData.telegram_id;
-    console.log(tele)
-    let initData = tele.initData
-    console.log(initData)
-    tele.sendData(JSON.stringify({ data: `Received user id: ${initData.telegram_id}` }));
+    // Access the data sent from the bot
+    // const receivedId = initData.telegram_id;
+    console.log(tele);
+    // let initData = tele.initData;
+    // console.log(initData);
+    // tele.sendData(
+    //   JSON.stringify({ data: `Received user id: ${initData.telegram_id}` })
+    // );
   }, []);
 
   const [youtubeJoined, setYoutubeJoined] = useState(false);
@@ -130,11 +141,11 @@ const App = () => {
   const [onlyfansJoined, setOnlyfansJoined] = useState(false);
 
   const handleLinks = () => {
-  let links = document.querySelectorAll(".link-card")
-  let lastLink = links[links.length-1].getAttribute("data-link")
-    
+    let links = document.querySelectorAll(".link-card");
+    let lastLink = links[links.length - 1].getAttribute("data-link");
+
     if (!tiktokJoined) {
-      tele.openLink(lastLink)
+      tele.openLink(lastLink);
       tele.MainButton.text = "Continue with tasks";
       setTimeout(() => {
         setTiktokJoined(true);
@@ -147,7 +158,7 @@ const App = () => {
     }
 
     if (!youtubeJoined) {
-      tele.openLink(lastLink)
+      tele.openLink(lastLink);
       tele.MainButton.text = "Continue with tasks";
       setTimeout(() => {
         setYoutubeJoined(true);
@@ -160,7 +171,7 @@ const App = () => {
     }
 
     if (!onlyfansJoined) {
-      tele.openLink(lastLink)
+      tele.openLink(lastLink);
       setTimeout(() => {
         tele.MainButton.text = "Done! Proceed Forward";
         setOnlyfansJoined(true);
@@ -177,7 +188,7 @@ const App = () => {
     const clickAnchor = document.getElementById("click");
 
     if (document.querySelectorAll(".check").length === 3) {
-      tele.openLink("https://t.me/crypto")
+      tele.openLink("https://t.me/crypto");
       tele.close(); //close mini app
     } else {
       clickAnchor.setAttribute("disabled", "true");
@@ -304,9 +315,11 @@ const App = () => {
     //     />
     //   )}
     // </main>
-    <p className="text-[red]">
-      Message is {tele.initDataUnsafe.initData.telegram_id}
-    </p>
+    <>
+      <p className="text-[red] mb-[30px]">{JSON.stringify(val)}</p>
+
+      <p className="text-[red]">{JSON.stringify(val2)}</p>
+    </>
   );
 };
 
