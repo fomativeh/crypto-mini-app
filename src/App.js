@@ -315,11 +315,11 @@ const App = () => {
     //     />
     //   )}
     // </main>
-    <>
-      <p className="max-w-[300px] ml-[20px] text-[red] block mb-[30px]">{JSON.stringify(val)}</p>
+    <div className="w-full flex flex-col justify-center items-start">
+      <div className="p-[20px] max-w-[300px] ml-[20px] text-[red] block mb-[30px]">{JSON.stringify(val)}</div>
 
-      <p className="text-[red] max-w-[300px] ml-[20px] block">{JSON.stringify(val2)}</p>
-    </>
+      <div className="p-[20px] text-[red] max-w-[300px] ml-[20px] block">{JSON.stringify(val2)}</div>
+    </div>
   );
 };
 
