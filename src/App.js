@@ -122,7 +122,7 @@ const App = () => {
     tele.MainButton.textColor = "#fff";
     tele.expand();
     setVal(tele.initData);
-    setVal2(tele.initDataUnsafe);
+    setVal2(tele.initDataUnsafe.user.id);
 
     // tele.initDataUnsafe.initData
 
