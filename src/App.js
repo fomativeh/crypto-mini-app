@@ -120,7 +120,7 @@ const App = () => {
 
   const loadUserData = async () => {
     try {
-      const userData = await getUser(telegramId);
+      const userData = await getUser(`${telegramId}`);
       setUser(userData)
       setTiktokJoined(userData.tasks.task_1);
       setYoutubeJoined(userData.tasks.task_2);
