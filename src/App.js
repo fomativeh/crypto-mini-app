@@ -121,6 +121,7 @@ const App = () => {
   const loadUserData = async () => {
     try {
       const userData = await getUser(telegramId);
+      setUser(userData)
       setTiktokJoined(userData.tasks.task_1);
       setYoutubeJoined(userData.tasks.task_2);
       setOnlyfansJoined(userData.tasks.task_3);
@@ -251,7 +252,8 @@ const App = () => {
       <FollowComponent type={1} />
 
       <span className="text-left text-[#F2EFEF] w-full block ml-[10px] text-[20px] mt-[20px]">
-        Welcome to @Crypto {telegramId}
+        {/* Welcome to @Crypto  */}
+        {JSON.stringify(user)}
       </span>
 
       {/* White line */}
