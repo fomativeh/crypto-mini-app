@@ -61,7 +61,7 @@ const FollowComponent = ({ joined, step, type, prompt, link, handleLinks }) => {
         <section
           className="flex flex-col justify-start items-start mb-[22px] w-full link-card"
           data-link={`${link}`}
-          onClick={handleLinks}
+          // onClick={handleLinks}
         >
           <span className="mb-[20px] font-[Aldrich] font-normal">
             STEP {step}
