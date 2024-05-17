@@ -125,9 +125,17 @@ const App = () => {
       setTiktokJoined(userData.tasks.task_1);
       setYoutubeJoined(userData.tasks.task_2);
       setOnlyfansJoined(userData.tasks.task_3);
-      if (userData.tasks.task3) {
+
+      //Change MainButton text to "Proceed" if user already completed tasks
+      if (userData.tasks.task_3) {
         tele.MainButton.text = "Done! Proceed Forward";
       }
+
+      //Change MainButton text to "Proceed" if user already completed tasks
+      if (userData.tasks.task_1 && !userData.tasks.task_2) {
+        tele.MainButton.text = "Continue with tasks";
+      }
+
     } catch (error) {
       console.log(error);
     }
