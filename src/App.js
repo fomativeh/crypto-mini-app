@@ -251,7 +251,7 @@ const App = () => {
       <FollowComponent type={1} />
 
       <span className="text-left text-[#F2EFEF] w-full block ml-[10px] text-[20px] mt-[20px]">
-        Welcome to @Crypto
+        Welcome to @Crypto {telegramId}
       </span>
 
       {/* White line */}
