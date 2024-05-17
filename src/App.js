@@ -121,7 +121,6 @@ const App = () => {
   const loadUserData = async () => {
     try {
       const userData = await getUser(telegramId);
-      console.log(userData);
       setTiktokJoined(userData.tasks.task_1);
       setYoutubeJoined(userData.tasks.task_2);
       setOnlyfansJoined(userData.tasks.task_3);
@@ -141,7 +140,7 @@ const App = () => {
     tele.MainButton.color = "#F4AD00";
     tele.MainButton.textColor = "#fff";
     tele.expand();
-    // setTelegramId(tele.initDataUnsafe.user.id);
+    setTelegramId(tele.initDataUnsafe.user.id);
     loadUserData();
   }, []);
 
