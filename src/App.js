@@ -125,6 +125,12 @@ const App = () => {
       setTiktokJoined(userData.tasks.task_1);
       setYoutubeJoined(userData.tasks.task_2);
       setOnlyfansJoined(userData.tasks.task_3);
+      
+      tele.MainButton.show();
+      tele.MainButton.text = "Start with tasks";
+      tele.MainButton.color = "#F4AD00";
+      tele.MainButton.textColor = "#fff";
+      tele.expand();
 
       //Change MainButton text to "Proceed" if user already completed tasks
       if (userData.tasks.task_3) {
@@ -144,11 +150,6 @@ const App = () => {
   //Executes whenever query is changed
   useEffect(() => {
     tele.ready();
-    tele.MainButton.show();
-    tele.MainButton.text = "Start with tasks";
-    tele.MainButton.color = "#F4AD00";
-    tele.MainButton.textColor = "#fff";
-    tele.expand();
     setTelegramId(tele?.initDataUnsafe?.user?.id);
   }, []);
 
